@@ -9793,6 +9793,10 @@ Created 2014-06-06, Karrer Zheng&lt;br&gt;
 <part name="SUPPLY18" library="supply2" deviceset="+5V" device=""/>
 <part name="SUPPLY2" library="supply2" deviceset="+9V" device=""/>
 <part name="SUPPLY5" library="supply2" deviceset="GND" device=""/>
+<part name="SUPPLY6" library="supply2" deviceset="+9V" device=""/>
+<part name="SUPPLY7" library="SparkFun-Aesthetics" deviceset="3.3V" device=""/>
+<part name="SUPPLY10" library="supply2" deviceset="+12V" device=""/>
+<part name="SUPPLY17" library="supply2" deviceset="+12V" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -10019,6 +10023,10 @@ Created 2014-06-06, Karrer Zheng&lt;br&gt;
 <instance part="SUPPLY18" gate="+5V" x="22.86" y="200.66"/>
 <instance part="SUPPLY2" gate="G$1" x="2.54" y="15.24" rot="R90"/>
 <instance part="SUPPLY5" gate="GND" x="2.54" y="20.32" rot="R270"/>
+<instance part="SUPPLY6" gate="G$1" x="142.24" y="68.58" rot="R180"/>
+<instance part="SUPPLY7" gate="G$1" x="142.24" y="86.36"/>
+<instance part="SUPPLY10" gate="+12V" x="170.18" y="160.02" rot="R90"/>
+<instance part="SUPPLY17" gate="+12V" x="170.18" y="124.46" rot="R90"/>
 </instances>
 <busses>
 </busses>
@@ -10229,11 +10237,6 @@ Created 2014-06-06, Karrer Zheng&lt;br&gt;
 </net>
 <net name="IMU_RX" class="0">
 <segment>
-<pinref part="IMUCONNECTION" gate="G$1" pin="3"/>
-<wire x1="109.22" y1="88.9" x2="109.22" y2="93.98" width="0.1524" layer="91"/>
-<label x="109.22" y="93.98" size="1.778" layer="95" rot="R90" xref="yes"/>
-</segment>
-<segment>
 <pinref part="U$1" gate="G$1" pin="TX3"/>
 <wire x1="5.08" y1="68.58" x2="0" y2="68.58" width="0.1524" layer="91"/>
 <label x="0" y="68.58" size="1.778" layer="95" rot="R180" xref="yes"/>
@@ -10243,13 +10246,13 @@ Created 2014-06-06, Karrer Zheng&lt;br&gt;
 <wire x1="35.56" y1="248.92" x2="45.72" y2="248.92" width="0.1524" layer="91"/>
 <label x="45.72" y="248.92" size="1.778" layer="95" xref="yes"/>
 </segment>
+<segment>
+<pinref part="IMUCONNECTION" gate="G$1" pin="7"/>
+<wire x1="119.38" y1="88.9" x2="119.38" y2="93.98" width="0.1524" layer="91"/>
+<label x="119.38" y="93.98" size="1.778" layer="95" rot="R90" xref="yes"/>
+</segment>
 </net>
 <net name="IMU_TX" class="0">
-<segment>
-<pinref part="IMUCONNECTION" gate="G$1" pin="5"/>
-<wire x1="114.3" y1="88.9" x2="114.3" y2="93.98" width="0.1524" layer="91"/>
-<label x="114.3" y="93.98" size="1.778" layer="95" rot="R90" xref="yes"/>
-</segment>
 <segment>
 <pinref part="U$1" gate="G$1" pin="RX3"/>
 <wire x1="5.08" y1="66.04" x2="0" y2="66.04" width="0.1524" layer="91"/>
@@ -10259,6 +10262,11 @@ Created 2014-06-06, Karrer Zheng&lt;br&gt;
 <pinref part="IMU_FTDI" gate="G$1" pin="2"/>
 <wire x1="35.56" y1="246.38" x2="45.72" y2="246.38" width="0.1524" layer="91"/>
 <label x="45.72" y="246.38" size="1.778" layer="95" xref="yes"/>
+</segment>
+<segment>
+<pinref part="IMUCONNECTION" gate="G$1" pin="5"/>
+<wire x1="114.3" y1="88.9" x2="114.3" y2="93.98" width="0.1524" layer="91"/>
+<label x="114.3" y="93.98" size="1.778" layer="95" rot="R90" xref="yes"/>
 </segment>
 </net>
 <net name="XBEE_TX" class="0">
@@ -10283,20 +10291,6 @@ Created 2014-06-06, Karrer Zheng&lt;br&gt;
 <wire x1="198.12" y1="40.64" x2="208.28" y2="40.64" width="0.1524" layer="91"/>
 <pinref part="U3" gate="G$1" pin="DIN"/>
 <label x="198.12" y="40.64" size="1.778" layer="95" rot="R180" xref="yes"/>
-</segment>
-</net>
-<net name="GPS_PWR" class="0">
-<segment>
-<pinref part="GPS(OEM615)" gate="G$1" pin="1"/>
-<wire x1="142.24" y1="86.36" x2="142.24" y2="91.44" width="0.1524" layer="91"/>
-<label x="142.24" y="91.44" size="1.778" layer="95" rot="R90" xref="yes"/>
-</segment>
-</net>
-<net name="ANT_PWR" class="0">
-<segment>
-<pinref part="GPS(OEM615)" gate="G$1" pin="20"/>
-<wire x1="142.24" y1="71.12" x2="142.24" y2="66.04" width="0.1524" layer="91"/>
-<label x="142.24" y="66.04" size="1.778" layer="95" rot="R270" xref="yes"/>
 </segment>
 </net>
 <net name="GPS_RX" class="0">
@@ -10376,6 +10370,10 @@ Created 2014-06-06, Karrer Zheng&lt;br&gt;
 <segment>
 <pinref part="3.3V" gate="G$1" pin="2"/>
 <pinref part="SUPPLY22" gate="G$1" pin="3.3V"/>
+</segment>
+<segment>
+<pinref part="GPS(OEM615)" gate="G$1" pin="1"/>
+<pinref part="SUPPLY7" gate="G$1" pin="3.3V"/>
 </segment>
 </net>
 <net name="A1_RX" class="0">
@@ -10680,6 +10678,14 @@ Created 2014-06-06, Karrer Zheng&lt;br&gt;
 <pinref part="12+" gate="1" pin="MP"/>
 <pinref part="SUPPLY21" gate="+12V" pin="+12V"/>
 </segment>
+<segment>
+<pinref part="ANEMOMETER2" gate="G$1" pin="2"/>
+<pinref part="SUPPLY10" gate="+12V" pin="+12V"/>
+</segment>
+<segment>
+<pinref part="ANEMOMETER1" gate="G$1" pin="2"/>
+<pinref part="SUPPLY17" gate="+12V" pin="+12V"/>
+</segment>
 </net>
 <net name="N$4" class="0">
 <segment>
@@ -10765,6 +10771,10 @@ Created 2014-06-06, Karrer Zheng&lt;br&gt;
 <pinref part="U$1" gate="G$1" pin="VIN"/>
 <pinref part="SUPPLY2" gate="G$1" pin="+9V"/>
 </segment>
+<segment>
+<pinref part="GPS(OEM615)" gate="G$1" pin="20"/>
+<pinref part="SUPPLY6" gate="G$1" pin="+9V"/>
+</segment>
 </net>
 <net name="N$2" class="0">
 <segment>
@@ -10788,20 +10798,6 @@ Created 2014-06-06, Karrer Zheng&lt;br&gt;
 <pinref part="9REG" gate="G$1" pin="ADJ"/>
 <junction x="172.72" y="205.74"/>
 <junction x="172.72" y="218.44"/>
-</segment>
-</net>
-<net name="A1_PWR" class="0">
-<segment>
-<pinref part="ANEMOMETER1" gate="G$1" pin="2"/>
-<wire x1="172.72" y1="124.46" x2="165.1" y2="124.46" width="0.1524" layer="91"/>
-<label x="165.1" y="124.46" size="1.778" layer="95" rot="R180" xref="yes"/>
-</segment>
-</net>
-<net name="A2_PWR" class="0">
-<segment>
-<pinref part="ANEMOMETER2" gate="G$1" pin="2"/>
-<wire x1="172.72" y1="160.02" x2="165.1" y2="160.02" width="0.1524" layer="91"/>
-<label x="165.1" y="160.02" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="3DR_RX" class="1">
