@@ -10276,9 +10276,9 @@ Created 2014-06-06, Karrer Zheng&lt;br&gt;
 <label x="157.48" y="93.98" size="1.016" layer="95" rot="R90" xref="yes"/>
 </segment>
 <segment>
-<wire x1="198.12" y1="43.18" x2="208.28" y2="43.18" width="0.1524" layer="91"/>
-<pinref part="U3" gate="G$1" pin="DOUT"/>
-<label x="198.12" y="43.18" size="1.778" layer="95" rot="R180" xref="yes"/>
+<wire x1="198.12" y1="40.64" x2="208.28" y2="40.64" width="0.1524" layer="91"/>
+<pinref part="U3" gate="G$1" pin="DIN"/>
+<label x="198.12" y="40.64" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="XBEE_RX" class="0">
@@ -10288,9 +10288,9 @@ Created 2014-06-06, Karrer Zheng&lt;br&gt;
 <label x="160.02" y="63.5" size="1.016" layer="95" rot="R270" xref="yes"/>
 </segment>
 <segment>
-<wire x1="198.12" y1="40.64" x2="208.28" y2="40.64" width="0.1524" layer="91"/>
-<pinref part="U3" gate="G$1" pin="DIN"/>
-<label x="198.12" y="40.64" size="1.778" layer="95" rot="R180" xref="yes"/>
+<wire x1="198.12" y1="43.18" x2="208.28" y2="43.18" width="0.1524" layer="91"/>
+<pinref part="U3" gate="G$1" pin="DOUT"/>
+<label x="198.12" y="43.18" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="GPS_RX" class="0">
