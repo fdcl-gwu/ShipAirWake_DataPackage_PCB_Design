@@ -10806,12 +10806,22 @@ Created 2014-06-06, Karrer Zheng&lt;br&gt;
 <label x="33.02" y="200.66" size="1.016" layer="95" ratio="7" rot="R90" xref="yes"/>
 <wire x1="33.02" y1="208.28" x2="33.02" y2="198.12" width="0.1524" layer="91"/>
 </segment>
+<segment>
+<pinref part="U$1" gate="G$1" pin="TX0"/>
+<wire x1="5.08" y1="53.34" x2="0" y2="53.34" width="0.1524" layer="91"/>
+<label x="0" y="53.34" size="1.778" layer="95" rot="R180" xref="yes"/>
+</segment>
 </net>
 <net name="3DR_TX" class="1">
 <segment>
 <pinref part="3DR" gate="G$1" pin="2"/>
 <label x="27.94" y="200.66" size="1.016" layer="95" ratio="7" rot="R90" xref="yes"/>
 <wire x1="27.94" y1="210.82" x2="27.94" y2="198.12" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="U$1" gate="G$1" pin="RX0"/>
+<wire x1="5.08" y1="50.8" x2="0" y2="50.8" width="0.1524" layer="91"/>
+<label x="0" y="50.8" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 </nets>
